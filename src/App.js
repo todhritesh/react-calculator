@@ -84,7 +84,7 @@ function reducer(state , {type , payload}){
         }
       }
       if(state.currentOperand==null)return state
-      if(state.currentOperand===1){
+      if(state.currentOperand.length===1){
         return {
           ...state,
           currentOperand:null,
@@ -93,7 +93,7 @@ function reducer(state , {type , payload}){
 
       return {
         ...state,
-        currentOperand:state.currentOperand.slice(-1)
+        currentOperand:state.currentOperand.slice(0,  -1)
       }
     }
   }
