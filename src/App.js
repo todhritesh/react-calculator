@@ -129,6 +129,7 @@ function formatOperand(operand){
   if(operand==null)return
   const [integer , decimal] = operand.split('.')
   if(decimal==null)return INTEGER_fORMATTER.format(integer)
+  return `${INTEGER_fORMATTER.format(integer)}.${decimal}`
 }
 
 
